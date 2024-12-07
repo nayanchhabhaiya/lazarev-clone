@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gilroy", sans-serif;
+  color: #ffffff;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+nav {
+  position: fixed;
+  display: flex;
+  align-items: flex-start;
+  height: 12vh;
+  width: 100%;
+  padding: 2vw 10.4vw;
+  justify-content: space-between;
+  background-color: #0c0c0c;
+  z-index: 10;
+}
+nav h1 {
+  font-size: 1.6vw;
+}
+.nav-part2 {
+  display: flex;
+  gap: 2vw;
+  align-items: flex-start;
+  padding: 1vh 0;
+  position: relative;
+  z-index: 10;
+}
+.nav-part2 h4 {
+  font-size: 0.73vw;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 2.6vw;
+}
+.nav-part2 h5 {
+  margin-bottom: 1vw;
+  /* background-color: red; */
+  display: none;
+  overflow: hidden;
+}
+.nav-part2 h5 span {
+  font-size: 0.74vw;
+  font-weight: 400;
+  display: inline-block;
+}
+
+nav button {
+  margin-top: -9px;
+  background-color: #0ba34e;
+  display: flex;
+  align-items: center;
+  padding: 12px 18px;
+  border-radius: 50px;
+  border: none;
+  font-size: 0.85vw;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+nav button svg {
+  height: 0.85vw;
+  margin-left: 1.6vw;
+}
+#nav-bottom {
+  width: 79%;
+  height: 0vh;
+  position: absolute;
+  background-color: #0c0c0c;
+  top: 100%;
+  z-index: 9;
+  border-bottom: 1px solid #fff;
+}
+
+#page1 {
+  height: 100vh;
+  width: 100%;
+  background-color: #0c0c0c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#page1 h1 {
+  font-size: 7vw;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 7vw;
+}
+#page1 svg {
+  height: 5vw;
+  width: 5vw;
+  border-radius: 50%;
+  background-color: #0da34e;
+}
+#page1 p {
+  text-align: center;
+  font-weight: 400;
+  margin-top: 5vh;
+  font-size: 1vw;
+}
+#page1-something {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#page1-something h4 {
+  font-weight: 400;
+  font-size: 1vw;
+  text-transform: lowercase;
+  margin-top: 0.3vw;
+  padding: 3px 10px;
+  border: 1px solid hsl(0, 0%, 65%);
+  border-radius: 50px;
+}
+#page1-something h4:nth-last-child(2) {
+  border: none;
+  padding: 3px;
+}
+#moving-div {
+  /* background-color: red; */
+  margin-top: 10vh;
+  position: absolute;
+  bottom: 5%;
+  width: 44%;
+  white-space: nowrap;
+  padding: 1.2vw;
+  overflow: hidden;
+}
+#moving-div .move {
+  display: inline-block;
+  animation-name: move;
+  animation-duration: 9s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#moving-div .move img {
+  height: 1vw;
+  margin: 0 1.2vw;
+}
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+#blur-left {
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(to left, transparent, #0c0c0c);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+#blur-right {
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #0c0c0c);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+#page2 {
+  height: 100vh;
+  width: 100%;
+  background-color: #0c0c0c;
+  position: relative;
+  padding: 0vw 10.4vw;
+  padding-bottom: 8vw;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #333;
+  
+}
+#page2-left{
+    height: 100%;
+    width: 40%;
+    /* background-color: rgb(69, 69, 69); */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 3vw 0;
+}
+#page2-left p{
+    font-size: 0.8vw;
+    font-weight: 200;
+}
+#page2-left h5{
+    font-size: 1vw;
+    width: 70%;
+    font-weight: 200;
+}
+
+#page2-right{
+    height: 100%;
+    width: 50%;
+    /* background-color: rgb(70, 70, 70); */
+}
+.right-elem{
+    position: relative;
+    /* background-color: red; */
+    padding-top: 1.5vw;
+    padding-bottom: 5vw;
+    border-bottom: 1px solid #333;
+}
+.right-elem h2{
+    font-size: 1.2vw;
+    font-weight: 200;
+}
+.right-elem img{
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    scale: 0;
+}
